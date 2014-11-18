@@ -1,0 +1,36 @@
+body {
+  font-family: Sans-Serif;
+}
+div + div {
+  margin-top: 1em;
+}
+.game {
+  counter-reset: numCells;
+}
+.game table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.game tr td {
+  padding: 0;
+  border: 1px solid #2f4f4f;
+}
+.game input[type=checkbox] {
+  margin: 0;
+  display: block;
+  box-shadow: 0 0 0 99px #ffd700 inset;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: 500ms;
+          transition: 500ms;
+}
+.game input[type=checkbox]:checked {
+  box-shadow: 0 0 0 99px #000 inset;
+  counter-increment: numCells;
+}
+.game .cell-count:after {
+  content: counter(numCells);
+}

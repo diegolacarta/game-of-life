@@ -1,0 +1,34 @@
+body
+    font-family Sans-Serif
+
+div + div
+    margin-top 1em
+
+.game
+    counter-reset numCells
+
+    table
+        border-spacing 0
+        border-collapse collapse
+
+    tr td
+        padding 0
+        border 1px solid darkslategray
+
+    input[type=checkbox]
+        margin 0
+        display block
+        box-shadow 0 0 0 99px gold inset
+        width 20px
+        height 20px
+        -webkit-appearance none
+        -moz-appearance none
+        appearance none
+        transition 500ms
+
+        &:checked
+            box-shadow 0 0 0 99px black inset
+            counter-increment numCells
+
+    .cell-count:after
+        content counter(numCells)

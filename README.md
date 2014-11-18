@@ -1,0 +1,1 @@
+Just a simple Conway's game of life created in pure javascript, html & css
